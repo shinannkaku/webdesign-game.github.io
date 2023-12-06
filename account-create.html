@@ -78,7 +78,7 @@
                                         <div class="invalid-feedback" data-sb-feedback="password_check:required">輸入密碼</div>
                                         <div class="invalid-feedback" data-sb-feedback="password_check:password_check"></div>
                                     </div>
-                                    <div class="d-grid"><button class="btn btn-primary btn-lg " name="submitButton" id="submitButton" type="submit">註冊帳號</button></div>
+                                    <div class="d-grid"><button class="btn btn-primary btn-lg " name="createButton" id="createButton" type="submit">註冊帳號</button></div>
                                 </form>
                             </div>
                         </div>
@@ -109,13 +109,14 @@
                 }
                 //驗證成功後上傳資料
                 else{   
-                    document.getElementById('submitButton').disabled=true;
+                    document.getElementById('createButton').disabled=true;
                     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                         .then(response => alert("註冊成功!"))
                         .catch(error => console.error('Error!', error.message));
                 //等待上傳時要關掉按鈕下面是等5.5秒後重新開啟
                     setTimeout(function() {
-                        document.getElementById('submitButton').disabled=false, 10000
+                        document.getElementById('createButton').disabled=false, 10000
+                        document.location.href="account-submit.html";
                     }, 5500);
                     return ;
                 }
