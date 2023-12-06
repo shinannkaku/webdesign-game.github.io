@@ -97,9 +97,10 @@
                 var at_check = document.getElementById('account').value;
                 var pd_check = document.getElementById('password').value;
                 $.getJSON(url, function(json) {
+
                     var values = json.values;// 所有試算表資料
                     // 二維陣列，用FOR迴圈計算是否有正確的帳號
-                    for(var i= 1; values[i][0]!= ''; i+=1){
+                    for(var i= 1; i!=values.length; i+=1){
                         if(at_check == values[i][0]){
                             if(pd_check == values[i][1]){//計算是否有正確的密碼
                                 alert('登入成功!');
@@ -111,10 +112,8 @@
                                 return;
                             }
                         }
-                    };
+                    }
                     alert('帳號或密碼錯誤!');
-                    return;
-
                 });
                 }, false);
         </script>
