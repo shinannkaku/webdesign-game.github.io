@@ -33,18 +33,20 @@ section{
         padding-top:0%
     }
 }
+
 .container{
-    position: center;
+    position: left;
     display: flex;
     justify-content: center;
 }
 
-.float {
-    width: 400px;
+.float1 {
+    width: 300px;
+    border-radius: 10px;
     background-color: black;
     border-width: 2px;
-    border-style: solid;
-    border-color: rgb(205, 70, 92);
+    border-style: circle;
+    border-color: rgb(0, 251, 255);
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 50px;
@@ -54,9 +56,22 @@ section{
     color: white;
 }
 
-h1 {
-    color:rgb(0, 234, 255)
+.float2 {
+    width: 1000px;
+    border-radius: 10px;
+    background-color: rgb(8, 8, 54);
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(0, 251, 255);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 8px;
+    font-weight: bold;
+    color: white;
 }
+
 
 
 
