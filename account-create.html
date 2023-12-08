@@ -89,38 +89,55 @@
         <footer class="py-5 bg-dark">
             <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright &copy; 網頁程式設計 2023</p></div>
         </footer>
+        <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
         <script type="text/javascript">
+            var url = "https://sheets.googleapis.com/v4/spreadsheets/1LGtBVKIYxyWMr1jIp2MdOjS9vbVfNjmsoM3RewGj68w/values/Sheet1?alt=json&key=AIzaSyB1ja51HOOIp0wgT-3nEz2P50zkb_zUASQ";
             const scriptURL='https://script.google.com/macros/s/AKfycbzbwE9MigL82Qbj_za9crg1Trpaod4DD0fua6OMgMvdByQQgk2V7pD625tHSyrICqY2fg/exec';
             const form = document.forms['userForm'];
               //當按下按鈕時執行
             form.addEventListener('submit', function(e)
-             {
+            {
+                var at_check = document.getElementById('account').value;
                 var check_x = document.forms["userForm"]["password"].value;
                 var check_y = document.forms["userForm"]["password_check"].value;
                 e.preventDefault();
-                //確認密碼
-                if(check_x.length<6){
-                    alert('請輸入六位數以上密碼!');
-                    return false;
-                } 
-                else if (check_x != check_y) {
-                    alert("請確認密碼是否輸入正確"); 
-                    return false;
-                }
-                //驗證成功後上傳資料
-                else{   
-                    document.getElementById('createButton').disabled=true;
-                    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                        .then(response => alert("註冊成功!"))
-                        .catch(error => console.error('Error!', error.message));
-                //等待上傳時要關掉按鈕下面是等5.5秒後重新開啟
-                    setTimeout(function() {
-                        document.getElementById('createButton').disabled=false, 10000
-                        document.location.href="account-submit.html";
-                    }, 5500);
-                    return ;
-                }
+                $.getJSON(url, function(json)
+                {
 
+                    var values = json.values;// 所有試算表資料
+                    // 二維陣列，用FOR迴圈計算是否有正確的帳號
+                    for(var i= 1; i!=values.length; i+=1){
+                        //確認是否有相同的帳號
+                        if(at_check == values[i][0]){
+                            alert('已有相同帳號名稱!');
+                            document.location.href="account-create.html";
+                        }
+
+                    }
+                    //確認密碼
+                    if(check_x.length<6){
+                        alert('請輸入六位數以上密碼!');
+                        return false;
+                    } 
+                    else if (check_x != check_y) {
+                        alert("請確認密碼是否輸入正確"); 
+                        return false;
+                    }
+                    //驗證成功後上傳資料
+                    else{   
+                        document.getElementById('createButton').disabled=true;
+                        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                            .then(response => alert("註冊成功!"))
+                            .catch(error => console.error('Error!', error.message));
+                    //等待上傳時要關掉按鈕下面是等5.5秒後重新開啟
+                        setTimeout(function() {
+                            document.getElementById('createButton').disabled=false, 10000
+                            document.location.href="account-submit.html";
+                        }, 5500);
+                        return ;
+                    }
+
+                });
             })
         </script>
         <!-- Bootstrap core JS-->
