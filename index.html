@@ -19,8 +19,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/my_style.css" rel="stylesheet">
-    </head>
-    <body>
+
         
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -44,47 +43,55 @@
             </div>
         </nav>
         <!-- Page Content-->
-    <section>
-
-        <div class="container">
-            <div class="float1">
-                <h1 class="font-weight-light">文章目錄</h1>
-                <li class="list-group-item">Rhythm Hive</li>
-                <li class="list-group-item ">(遊戲名稱)</li>
-                <li class="list-group-item ">(遊戲名稱)</li>
-                <a id ="bottom"></a>
-                <a class="btn btn-primary" href="#bottom">Start</a>
-            </div>
-            <div class="float2">
-                <h2 class="font-weight-light">留言討論區</h2>
-                <a class="btn btn-primary" href="#bottom">Start</a>
-            </div>
-        </div>
-
-
-    </section>  
-            <!-- Call to Action-->
-
-    <head>
-                <!-- 其他標籤 -->
-
-                <!-- 其他標籤 -->
     </head>
+
     <style>
+        head {
+            z-index: -1;
+        }
         body{
-            background-image:url(assets/img/gamebackground.jpg);
+            background-image:url(assets/img/gamebackground01.jpg);
             background-repeat:repeat;
         }
 
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            z-index: 0;
+        }
 
+        .mySlides {
+            display: none;
+            max-width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* 可以添加其他样式... */
 
     </style>
 
-
     <body>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="assets/img/rhythm_hive.jpg" alt="Image 1">
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="assets/img/lol.jpg" alt="Image 2">
+            </div>
+            
+            <!-- 添加更多图片... -->
+        </div>
+
             
             <div class="card text-white bg-secondary my-5 py-4 text-center">
-                <div class="card-body custom-padding"><p class="text-white m-0">這個網站介紹了遊戲小組認為有趣的遊戲推薦給大家，裡面會介紹該遊戲的基礎玩法以及圖鑑等，也有連結到真正的官網，也歡迎各位在文章底下參考與討論。</p></div>
+                <div class="card-body custom-padding"><p class="text-white m-0">這個網站介紹了遊戲小組認為有趣的遊戲推薦給大家，點擊遊戲名稱下方的電玩圖標可以連結到介紹該遊戲的部落格文章，也歡迎各位在文章底下參考與討論。</p></div>
             </div>
 
             <!-- Content Row-->
@@ -93,10 +100,11 @@
                     <div class="card h-150">
                         <div class="card-body">
                             <h2 class="card-title">Rhythm Hive</h2>
+                            <p class="card-text">結合音樂與節奏的手機遊戲，挑戰節奏、收集卡片、與全球玩家同樂音樂饗宴。</p>
                         </div>
                             <!--社群圖標-->
-                            <div class="social-icon-wrapper">
-                            <a class="social-icon" href="blog-rhythmhive.html"><i class="fas fa-gamepad"></i></a>
+                            <div class="card-footer"><a class="social-icon-wrapper"></a>
+                            <a class="social-icon" href="blog-rhythmhive.html" style="margin:20px;"><i class="fas fa-gamepad"></i></a>
                             </div>
                     </div>
                 </div>
@@ -120,7 +128,6 @@
                 </div>
             </div>
         </div>
-    </body>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
             <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright &copy; 網頁程式設計 2023</p></div>
@@ -130,4 +137,22 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
+    <script>
+        let slideIndex = 1;
+    carousel();
+
+    function carousel() {
+        let i;
+        const slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(carousel, 2000); // 切换图片的间隔时间（以毫秒为单位）
+    }
+    </script>
 </html>
