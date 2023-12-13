@@ -12,10 +12,10 @@ function carousel() {
     slideIndex = 1;
   }
   slides[slideIndex - 1].style.display = "block";
-  setTimeout(carousel, 2000); // 切换图片的间隔时间（以毫秒为单位）
+  setTimeout(carousel, 2000); // 切換圖片的間隔時間
 }
 
-// 手动切换图片
+//手動切換圖片
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
