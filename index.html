@@ -46,47 +46,67 @@
     </head>
 
     <style>
-        head {
-            z-index: -1;
-        }
         body{
-            background-image:url(assets/img/gamebackground01.jpg);
+            background-image:url('assets/img/gamebackground01.jpg');
             background-repeat:repeat;
         }
-
         .slideshow-container {
             position: relative;
-            max-width: 100%;
+            max-width: 800px;
             margin: auto;
-            z-index: 0;
-        }
-
+            overflow: hidden;
+            border: 1px solid #ccc;
+         }
+    
         .mySlides {
             display: none;
-            max-width: 100%;
-        }
-
-        img {
             width: 100%;
             height: auto;
-        }
+         }
 
-        /* 可以添加其他样式... */
+        /* 按钮样式 */
+        .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        }
+    
+        /* 左右切换按钮位置 */
+        .prev {
+        left: 0;
+        border-radius: 3px 0 0 3px;
+        }
+        
+        .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        }
 
     </style>
 
     <body>
 
         <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="assets/img/rhythm_hive.jpg" alt="Image 1">
+            <div class="mySlides">
+                <img src="assets/img/1.jpg" alt="Image 1">
             </div>
             
-            <div class="mySlides fade">
+            <div class="mySlides">
                 <img src="assets/img/lol.jpg" alt="Image 2">
             </div>
             
             <!-- 添加更多图片... -->
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
         </div>
 
             
@@ -137,22 +157,4 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
-    <script>
-        let slideIndex = 1;
-    carousel();
-
-    function carousel() {
-        let i;
-        const slides = document.getElementsByClassName("mySlides");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-            slideIndex = 1;
-        }
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(carousel, 2000); // 切换图片的间隔时间（以毫秒为单位）
-    }
-    </script>
 </html>

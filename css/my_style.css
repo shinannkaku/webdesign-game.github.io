@@ -1,38 +1,33 @@
 
-head{
-    font-family:"Chakra Petch", Times, serif;
-}
 body{
     padding:20px 20px 20px 20px;
 }
-
 p{
     font-size:medium;
 }
 
-div{
-    .social-icon-wrapper {
-        display: flex;
-        justify-content: left; 
-        align-items: left; 
-    }
 
-    .social-icon {
-        color: rgb(0, 234, 255);
-        font-size: 48px; 
-    }
+.social-icon-wrapper {
+    display: flex;
+     justify-content: left; 
+     align-items: left; 
 }
 
-
+.social-icon {
+    color: rgb(0, 234, 255);
+    font-size: 48px; 
+}
 
 .container{
-    position: left;
     display: flex;
-    justify-content: center;
-    text-align: center;
-    position: relative;
+    position: relative center;
     padding-top:0%
-   
+
 }
+
+.footer {
+    position: center;
+}
+
 
 
