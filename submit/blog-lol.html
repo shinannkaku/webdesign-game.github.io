@@ -8,14 +8,14 @@
         <!-- 搜尋引擎找到時標題下面的簡介 -->
         <meta name="author" content="" />
         <!-- 作者名稱 -->
-        <title>League of Legends</title>
+        <title>Rhythm Hive</title>
         <!-- 網站的標題左邊的圖片 -->
-        <link rel="icon" type="image/x-icon" href="assets/img/game.ico" />
+        <link rel="icon" type="image/x-icon" href="../assets/img/game.ico" />
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 
         <!-- css主題 -->
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet" />
     </head>
 
     <style>
@@ -38,34 +38,34 @@
 
 
     <body class="d-flex flex-column h-100">
-        <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container px-5">
-                <a class="navbar-brand" href="index.html">Game Introduction</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">主頁</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">關於</a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://www.leagueoflegends.com/zh-tw/">官方網站</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">帳號</a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-                                <li><a class="dropdown-item" href="account-submit.html">帳號登入</a></li>
-                                <li><a class="dropdown-item" href="account-create.html">創立帳號</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="index.html">Game Introduction</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="index.html">主頁</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">關於</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://www.leagueoflegends.com/zh-tw/">官方網站</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">帳號</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
+                                    <li><a class="dropdown-item" href="../index.html">帳號登出</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
             <!-- Page Content-->
             <section class="py-5">
                 <div class="container px-5 my-5">
                     <div class="row gx-5">
                         <div class="col-lg-3">
                             <div class="d-flex align-items-center mt-lg-5 mb-4">
-                                <img class="img-fluid rounded-circle" src="assets/img/cat.jpg" alt="..." />
+                                <img class="img-fluid rounded-circle" src="../assets/img/cat.jpg" alt="..." />
                             </div>
                         </div>
                         <div class="col-lg-9">
@@ -82,7 +82,7 @@
                                     <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
                                 </header>
                                 <!-- Preview image figure-->
-                                <figure class="mb-4"><img class="img-fluid rounded" src="assets/img/222.jpg" alt="..." /></figure>
+                                <figure class="mb-4"><img class="img-fluid rounded" src="../assets/img/222.jpg" alt="..." /></figure>
                                 <!-- Post content-->
                                 <section class="mb-5">
                                     <p class="fs-5 mb-4">英雄聯盟（League of Legends，簡稱LoL）是一款由美國遊戲開發公司Riot Games開發並發行的多人線上戰術競技遊戲。該遊戲於2009年首次推出，迅速成為全球最受歡迎的電子競技遊戲之一。</p>
@@ -100,7 +100,8 @@
                                     <div class="card-body">
                                         <p>留言區 </p>
                                         <!-- Comment form-->
-                                        <button class="btn btn-primary btn-lg" onclick = "window.location.href='account-submit.html'" type="button">登入後才能留言</button></form>
+                                        <form id="userForm" class="mb-4"><textarea class="form-control" id="User_text" name='Text' rows="3" placeholder="輸入留言"></textarea>
+                                        <button class="btn btn-primary btn-lg " name="Button" id="Button" type="submit">留言</button></form>
                                         <!-- Comment with nested comments-->
                                         <div class="htmltext"></div>
                                     </div>
@@ -113,8 +114,30 @@
         </main>
         <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/scripts.js"></script>
-        <script src="js/blog-lol.js"></script>
+        <script src="../js/scripts.js"></script>
+        <script src="../js/blog-lol.js"></script>
+        <script type="text/javascript">
+            const scriptURL='https://script.google.com/macros/s/AKfycbxO1giJSff7nAON3t1lmJB8uJ9MO2Dz8Mv4aWAoImCjKxvVxMIH4PqmbOAsbgXXdanzng/exec';
+            const form = document.forms['userForm'];
+              //當按下按鈕時執行
+            form.addEventListener('submit', function(e)
+            {
+                // 上傳留言區的文字
+                var Text = document.getElementById('User_text').value;
+                e.preventDefault();
+
+                document.getElementById('Button').disabled=true;
+                
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => alert('留言成功!'))
+                    .catch(error => console.error('Error!', error.message));
+                setTimeout(function() {
+                    document.getElementById('Button').disabled=false, 10000;
+                    document.location.href="blog-lol.html";
+                }, 5500);
+                return ;
+            })
+        </script>
         <!-- Footer-->
         <footer class="bg-dark py-4 mt-auto">
             <div class="container px-5">
