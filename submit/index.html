@@ -8,7 +8,7 @@
         <meta name="author" content="遊戲介紹小組" />
         <title>遊戲介紹網站</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Google fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,8 +17,8 @@
         <!--social-icon-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <link href="css/my_style.css" rel="stylesheet">
+        <link href="../css/styles.css" rel="stylesheet" />
+        <link href="../css/my_style.css" rel="stylesheet">
 
         
         <!-- Responsive navbar-->
@@ -34,8 +34,8 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">帳號</a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-                                <li><a class="dropdown-item" href="account-submit.html">帳號登入</a></li>
-                                <li><a class="dropdown-item" href="account-create.html">創立帳號</a></li>
+                                <li><a class="dropdown-item" href="../index.html">帳號登出</a></li>
+
                             </ul>
                         </li>
                     </ul>
@@ -47,7 +47,7 @@
 
     <style>
         body{
-            background-image:url('assets/img/gamebackground01.jpg');
+            background-image:url('../assets/img/gamebackground01.jpg');
             background-repeat:repeat;
         }
         .slideshow-container {
@@ -97,11 +97,11 @@
 
         <div class="slideshow-container">
             <div class="mySlides">
-                <img src="assets/img/1.jpg" alt="Image 1">
+                <img src="../assets/img/1.jpg" alt="Image 1">
             </div>
             
             <div class="mySlides">
-                <img src="assets/img/lol.jpg" alt="Image 2">
+                <img src="../assets/img/lol.jpg" alt="Image 2">
             </div>
             
             <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -130,19 +130,23 @@
                 <div class="col-12 mb-5">
                     <div class="card h-150">
                         <div class="card-body">
-                            <h2 class="card-title">遊戲名稱</h2>
-                            <p class="card-text">遊戲介紹...</p>
+                            <h2 class="card-title">League of Legends</h2>
+                            <p class="card-text">英雄聯盟是Riot Games開發的多人戰略競技遊戲。玩家控制獨特英雄，在召喚師峽谷對抗摧毀對方基地。全球競技盛事和豐富英雄選擇使其成為受歡迎的電競遊戲。</p>
                         </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">前往</a></div>
+                            <div class="card-footer"><a class="social-icon-wrapper"></a>
+                            <a class="social-icon" href="blog-lol.html" style="margin:20px;"><i class="fas fa-gamepad"></i></a>
+                            </div>
                     </div>
                 </div>
                 <div class="col-12 mb-5">
                     <div class="card h-150">
                         <div class="card-body">
-                            <h2 class="card-title">遊戲名稱</h2>
-                            <p class="card-text">遊戲介紹...</p>
+                            <h2 class="card-title">Fate/Grand Order</h2>
+                            <p class="card-text">《Fate/Grand Order》（FGO）是手機遊戲，玩家扮演“御主”召喚歷史名人作為從者，穿越時空保護人類未來。故事情節豐富，角色鮮明，戰鬥策略性高，玩家需巧妙搭配從者技能。遊戲舉辦多樣活動，豐富互動與遊戲體驗。FGO以其深入的故事、多樣化角色和戰略性吸引廣大玩家。</p>
                         </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">前往</a></div>
+                        <div class="card-footer"><a class="social-icon-wrapper"></a>
+                            <a class="social-icon" href="blog-fgo.html" style="margin:20px;"><i class="fas fa-gamepad"></i></a>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -154,6 +158,6 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="../js/scripts.js"></script>
     </body>
 </html>
