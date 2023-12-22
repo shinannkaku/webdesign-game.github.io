@@ -177,6 +177,8 @@
                                         <p>留言區 </p>
                                         <!-- Comment form-->
                                         <form id="userForm" class="mb-4">
+                                            <input  id="User_name" name='Name' type="text" placeholder="輸入暱稱"></input>
+                                            <br /><br />
                                             <textarea class="form-control" id="User_text" name='Text' rows="3" placeholder="輸入留言"></textarea>
                                             <button class="btn btn-primary btn-lg " name="Button" id="Button" type="submit">留言</button>
                                         </form>
@@ -202,19 +204,21 @@
               //當按下按鈕時執行
             form.addEventListener('submit', function(e)
             {
+                var name = document.getElementById('User_name').value;
                 // 上傳留言區的文字
-                var Text = document.getElementById('User_text').value;
-                e.preventDefault();
-
                 document.getElementById('Button').disabled=true;
-                
+                if(!name){
+                    document.getElementById('User_name').value = '匿名使用者'
+                }
                 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                     .then(response => alert('留言成功!'))
                     .catch(error => console.error('Error!', error.message));
+
                 setTimeout(function() {
                     document.getElementById('Button').disabled=false, 10000;
                     document.location.href="blog-rhythmhive.html";
                 }, 5500);
+                e.preventDefault();
                 return ;
             })
         </script>
