@@ -11,10 +11,8 @@
         <title>Rhythm Hive</title>
         <!-- 網站的標題左邊的圖片 -->
         <link rel="icon" type="image/x-icon" href="../assets/img/faviconmusic.ico" />
-
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-
         <!-- css主題 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <link href="../css/styles.css" rel="stylesheet" />
     </head>
 
@@ -55,17 +53,17 @@
         }
     </style>
 
-
     <body class="d-flex flex-column h-100">
+
         <main class="flex-shrink-0">
-            <!-- Navigation-->
+            <!-- 頁首 -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container px-5">
                     <a class="navbar-brand" href="index.html">Game Introduction</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="index.html">主頁</a></li>
+                            <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">主頁</a></li>
                             <li class="nav-item"><a class="nav-link" href="about.html">關於</a></li>
                             <li class="nav-item"><a class="nav-link" href="https://www.gamer.com.tw/">更多參考</a></li>
                             <li class="nav-item dropdown">
@@ -172,15 +170,17 @@
                                         </main>
                                 </section>
                             </article>
-                            <!-- Comments section-->
+                            <!-- 留言區 -->
                             <section>
                                 <div class="card bg-light">
                                     <div class="card-body">
                                         <p>留言區 </p>
                                         <!-- Comment form-->
-                                        <form id="userForm" class="mb-4"><textarea class="form-control" id="User_text" name='Text' rows="3" placeholder="輸入留言"></textarea>
-                                        <button class="btn btn-primary btn-lg " name="Button" id="Button" type="submit">留言</button></form>
-                                        <!-- Comment with nested comments-->
+                                        <form id="userForm" class="mb-4">
+                                            <textarea class="form-control" id="User_text" name='Text' rows="3" placeholder="輸入留言"></textarea>
+                                            <button class="btn btn-primary btn-lg " name="Button" id="Button" type="submit">留言</button>
+                                        </form>
+                                        <!-- 留言顯示 -->
                                         <div class="htmltext"></div>
                                     </div>
                                 </div>
@@ -190,7 +190,12 @@
                 </div>
             </section>
         </main>
+        <!-- java script -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
         <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+        <script src="../js/scripts.js"></script>
+        <script src="../js/blog-rhythmhive.js"></script>
         <script type="text/javascript">
             const scriptURL='https://script.google.com/macros/s/AKfycbzH88SRdLh-CX89RhYZCavlRrNPvzrK5trGsvvpGjeVuuAGdGOlLIXd6urHc97x9mc/exec';
             const form = document.forms['userForm'];
@@ -213,6 +218,7 @@
                 return ;
             })
         </script>
+        <!-- 頁尾 -->
         <footer class="bg-dark py-4 mt-auto">
             <div class="container px-5">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
@@ -227,14 +233,7 @@
                 </div>
             </div>
         </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="../js/scripts.js"></script>
-        <script src="../js/blog-rhythmhive.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-        <!-- Core theme JS-->
+
     </body>
+
 </html>

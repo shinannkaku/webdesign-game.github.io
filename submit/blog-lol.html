@@ -8,13 +8,11 @@
         <!-- 搜尋引擎找到時標題下面的簡介 -->
         <meta name="author" content="" />
         <!-- 作者名稱 -->
-        <title>Rhythm Hive</title>
+        <title>League of Legends</title>
         <!-- 網站的標題左邊的圖片 -->
         <link rel="icon" type="image/x-icon" href="../assets/img/game.ico" />
-
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-
         <!-- css主題 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <link href="../css/styles.css" rel="stylesheet" />
     </head>
 
@@ -36,17 +34,17 @@
         }
     </style>
 
-
     <body class="d-flex flex-column h-100">
+
         <main class="flex-shrink-0">
-            <!-- Navigation-->
+            <!-- 頁首 -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container px-5">
                     <a class="navbar-brand" href="index.html">Game Introduction</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="index.html">主頁</a></li>
+                            <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">主頁</a></li>
                             <li class="nav-item"><a class="nav-link" href="about.html">關於</a></li>
                             <li class="nav-item"><a class="nav-link" href="https://www.leagueoflegends.com/zh-tw/">官方網站</a></li>
                             <li class="nav-item dropdown">
@@ -90,19 +88,21 @@
                                     <p class="fs-5 mb-4">英雄聯盟以其豐富的遊戲內容和戰略性而聞名。遊戲擁有超過百位不同風格和技能的英雄可供玩家選擇，玩家需根據團隊需要和對手陣容進行策略性的英雄選擇。此外，遊戲中有多種地圖模式和遊戲模式可供玩家體驗，包括傳統的5對5對戰模式、快節奏的ARAM模式以及夜曲等特殊模式。</p>
                                     <p class="fs-5 mb-4">英雄聯盟不僅僅是一款遊戲，它也是一個巨大的電子競技平台。全球各地有成千上萬的玩家參與各種規模的比賽，從家庭友誼賽到職業比賽，甚至是國際賽事，如全球錦標賽（Worlds）和季中冠軍賽（MSI）。這些比賽吸引了大量的觀眾和支持者，並產生了龐大的獎金和贊助商。</p>
                                     <p class="fs-5 mb-4">總的來說，英雄聯盟作為一款戰略性、多人在線競技遊戲，不僅擁有豐富多樣的遊戲內容和深度策略，也在電子競技和娛樂文化領域扮演著重要的角色，吸引了全球廣大玩家和支持者的熱愛與參與。</p>
-                                    <body>
                                         <!-- 在這裡加入內容 -->                                        
                                 </section>
                             </article>
-                            <!-- Comments section-->
+
+                            <!-- 留言區 -->
                             <section>
                                 <div class="card bg-light">
                                     <div class="card-body">
                                         <p>留言區 </p>
                                         <!-- Comment form-->
-                                        <form id="userForm" class="mb-4"><textarea class="form-control" id="User_text" name='Text' rows="3" placeholder="輸入留言"></textarea>
-                                        <button class="btn btn-primary btn-lg " name="Button" id="Button" type="submit">留言</button></form>
-                                        <!-- Comment with nested comments-->
+                                        <form id="userForm" class="mb-4">
+                                            <textarea class="form-control" id="User_text" name='Text' rows="3" placeholder="輸入留言"></textarea>
+                                            <button class="btn btn-primary btn-lg " name="Button" id="Button" type="submit">留言</button>
+                                        </form>
+                                        <!-- 留言顯示 -->
                                         <div class="htmltext"></div>
                                     </div>
                                 </div>
@@ -112,8 +112,11 @@
                 </div>
             </section>
         </main>
-        <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+
+        <!-- java script -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
         <script src="../js/scripts.js"></script>
         <script src="../js/blog-lol.js"></script>
         <script type="text/javascript">
@@ -138,7 +141,7 @@
                 return ;
             })
         </script>
-        <!-- Footer-->
+        <!-- 頁尾 -->
         <footer class="bg-dark py-4 mt-auto">
             <div class="container px-5">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
@@ -153,5 +156,7 @@
                 </div>
             </div>
         </footer>
+
     </body>
+
 </html>
