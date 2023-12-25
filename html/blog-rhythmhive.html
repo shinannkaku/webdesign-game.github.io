@@ -10,12 +10,12 @@
         <!-- 作者名稱 -->
         <title>Rhythm Hive</title>
         <!-- 網站的標題左邊的圖片 -->
-        <link rel="icon" type="image/x-icon" href="assets/img/faviconmusic.ico" />
+        <link rel="icon" type="image/x-icon" href="../assets/img/faviconmusic.ico" />
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 
         <!-- css主題 -->
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet" />
     </head>
 
     <style>
@@ -53,6 +53,10 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+
+        .video {
+            position:left;
+        }
     </style>
 
 
@@ -60,11 +64,11 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
-                <a class="navbar-brand" href="index.html">Game Introduction</a>
+                <a class="navbar-brand" href="../index.html">Game Introduction</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">主頁</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="../index.html">主頁</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">關於</a></li>
                         <li class="nav-item"><a class="nav-link" href="https://rhythmhive.hybecorp.com/">官方網站</a></li>
                         <li class="nav-item dropdown">
@@ -84,7 +88,7 @@
                     <div class="row gx-5">
                         <div class="col-lg-3">
                             <div class="d-flex align-items-center mt-lg-5 mb-4">
-                                <img class="img-fluid rounded-circle" src="assets/img/kpop.jpg" alt="..." />
+                                <img class="img-fluid rounded-circle" src="../assets/img/kpop.jpg" alt="..." />
                             </div>
                         </div>
                         <div class="col-lg-9">
@@ -101,7 +105,7 @@
                                     <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
                                 </header>
                                 <!-- Preview image figure-->
-                                <figure class="mb-4"><img class="img-fluid rounded" src="assets/img/rhythm_hive.jpg" alt="..." /></figure>
+                                <figure class="mb-4"><img class="img-fluid rounded" src="../assets/img/rhythm_hive.jpg" alt="..." /></figure>
                                 <!-- Post content-->
                                 <section class="mb-5">
                                     <p class="fs-5 mb-4">HYBE是一家在娛樂領域中引領潮流的公司，其音樂遊戲Rhythm Hive正是其獨特之處之一。Rhythm Hive結合了音樂、節奏和遊戲的元素，為用戶提供了一種全新的音樂遊戲體驗。這款遊戲由HYBE的豐富音樂庫提供支持，包括了各種不同風格的歌曲，讓玩家能夠沉浸於多種音樂世界之中。</p>
@@ -151,14 +155,34 @@
                                                     <th>遊戲玩法</th>
                                                 </tr>
                                                     <td>
-                                                        <p>玩法有點像鋼琴塊，但是旋律都是HYBE裡面團體的歌。</p>
-                                                        <p>因為我主要玩的團體是Enhypen，所以收集到的卡片級別較高。</p>
-                                                            <!--展現我完美的綜saeng UR 漂亮卡-->
+                                                        <p>玩法有點像鋼琴塊，但是旋律都是HYBE裡面團體的歌</p>
+                                                        <p>遊戲可以透過升級卡片來獲得較高的分數，卡片排序是B→A→S→R→XR→UR</p>
+                                                        <p>卡片當中的對應歌曲就是在指定歌曲中使用該卡片會得到較高的分數</p>
+                                                        <!--展現我完美的綜saeng UR 漂亮卡-->
+                                                        <img src="../assets/img/S__16850947.jpg" width="500" height="250">
                                                     </td>
                                                 <tr>
+                                                <tr>
+                                                    <td>
+                                                        <p>也可以設置個人檔案介面&日記等</p>
+                                                        <img src="../assets/img/S__16850950.jpg" width="500" height="300">
+                                                        <img src="../assets/img/S__16850949.jpg" width="500" height="300">
+                                                        <p>遊戲也會不定期推出限定活動，完成任務就可以獲得與抽取限定的小卡</p>
+                                                        <img src="../assets/img/890.jpg" width="500" height="250">
+                                                    </td>
+                                                </tr>
+                                                <tr class="table-primary">
                                                     <th>遊戲玩法影片示範</th>
+                                                </tr>
+                                                <tr>
                                                     <!--影片-->
                                                     <!--分享一個all excellent的bite me舞台-->
+                                                    <td>
+                                                        <video id="my video" width="480" height="270" controls>
+                                                            <source src="../assets/img/rh.mp4" type="video/mp4">
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                    </td>
                                                 </tr>
                                             </table>
                                         </main>
@@ -183,8 +207,8 @@
         </main>
         <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/scripts.js"></script>
-        <script src="js/blog-rhythmhive.js"></script>
+        <script src="../js/scripts.js"></script>
+        <script src="../js/blog-rhythmhive.js"></script>
         <!-- Footer-->
         <footer class="bg-dark py-4 mt-auto">
             <div class="container px-5">
