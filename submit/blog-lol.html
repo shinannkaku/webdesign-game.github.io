@@ -125,22 +125,28 @@
             const scriptURL='https://script.google.com/macros/s/AKfycbxO1giJSff7nAON3t1lmJB8uJ9MO2Dz8Mv4aWAoImCjKxvVxMIH4PqmbOAsbgXXdanzng/exec';
             const form = document.forms['userForm'];
               //當按下按鈕時執行
-              form.addEventListener('submit', function(e)
+            form.addEventListener('submit', function(e)
             {
                 var name = document.getElementById('User_name').value;
-                // 上傳留言區的文字
+                var text = document.getElementById('User_text').value;
                 document.getElementById('Button').disabled=true;
-                if(!name){
-                    document.getElementById('User_name').value = '匿名使用者'
+                if(!text){
+                    alert('請輸入留言');
+                    document.getElementById('Button').disabled=false;
                 }
-                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                    .then(response => alert('留言成功!'))
-                    .catch(error => console.error('Error!', error.message));
+                else{
+                    if(!name){
+                        document.getElementById('User_name').value = '匿名使用者'
+                    }
+                    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                        .then(response => alert('留言成功!'))
+                        .catch(error => console.error('Error!', error.message));
 
-                setTimeout(function() {
-                    document.getElementById('Button').disabled=false, 10000;
-                    document.location.href="blog-lol.html";
-                }, 5500);
+                    setTimeout(function() {
+                        document.getElementById('Button').disabled=false, 10000;
+                        document.location.href="blog-fgo.html";
+                    }, 5500);
+                };
                 e.preventDefault();
                 return ;
             })
