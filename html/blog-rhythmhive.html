@@ -108,6 +108,8 @@
                                 <figure class="mb-4"><img class="img-fluid rounded" src="../assets/img/rhythm_hive.jpg" alt="..." /></figure>
                                 <!-- Post content-->
                                 <section class="mb-5">
+                                    <button id="show">顯示</button>
+                                    <button id="hide">隱藏</button>
                                     <p class="fs-5 mb-4">HYBE是一家在娛樂領域中引領潮流的公司，其音樂遊戲Rhythm Hive正是其獨特之處之一。Rhythm Hive結合了音樂、節奏和遊戲的元素，為用戶提供了一種全新的音樂遊戲體驗。這款遊戲由HYBE的豐富音樂庫提供支持，包括了各種不同風格的歌曲，讓玩家能夠沉浸於多種音樂世界之中。</p>
                                     <p class="fs-5 mb-4">Rhythm Hive的遊戲機制設計獨具匠心，通過觸控屏幕，玩家需要按照歌曲節奏來點擊、滑動或搖晃，與音樂互動。遊戲內有多個難度等級可供選擇，從初學者到高手都能找到適合自己的挑戰。此外，Rhythm Hive還有多種遊戲模式，包括個人挑戰和多人合作等，讓玩家可以在喜愛的歌曲上展示自己的節奏感和技巧。</p>
                                     <p class="fs-5 mb-4">除了精彩的遊戲機制外，Rhythm Hive還提供了社交互動的功能。玩家可以建立個人資料、加入俱樂部、與朋友互動，甚至是進行多人對戰，這樣不僅能夠享受音樂遊戲的樂趣，還能與其他玩家建立更緊密的聯繫。</p>
@@ -209,6 +211,17 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="../js/scripts.js"></script>
         <script src="../js/blog-rhythmhive.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+            <script>
+               $(document).ready(function(){
+                  $("#show").click(function(){
+                     $("p").show();
+                  });
+                  $("#hide").click(function(){
+                     $("p").hide();
+                  });
+               });
+            </script>　
         <!-- Footer-->
         <footer class="bg-dark py-4 mt-auto">
             <div class="container px-5">
