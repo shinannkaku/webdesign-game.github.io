@@ -63,7 +63,7 @@
                                     <form action="php/account-submit.php" method="post">
                                     <!-- Name input-->
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" id="account" type="text" name="account" data-sb-validations="required" />
+                                            <input class="form-control" id="account" type="email" name="account" data-sb-validations="required" />
                                             <label for="account">帳號</label>   
                                             <div class="invalid-feedback" data-sb-feedback="account:account">輸入帳號</div>
                                         </div>
@@ -80,7 +80,7 @@
                                         <div class="d-grid"><button class="btn btn-primary btn-lg " id="submitButton" type="submit">登入</button></div>             
 
                                         </div>
-                                    </form>    
+                                    </form>
                                 </form>
                             </div>
                         </div>
@@ -92,7 +92,6 @@
         <script>
             var btn = document.getElementById('submitButton');
             var url = "https://sheets.googleapis.com/v4/spreadsheets/1LGtBVKIYxyWMr1jIp2MdOjS9vbVfNjmsoM3RewGj68w/values/Sheet1?alt=json&key=AIzaSyB1ja51HOOIp0wgT-3nEz2P50zkb_zUASQ";
-            //const form = document.forms['userForm'];
             btn.addEventListener('click', function(){
                 var at_check = document.getElementById('account').value;
                 var pd_check = document.getElementById('password').value;
@@ -104,8 +103,6 @@
                         if(at_check == values[i][0]){
                             if(pd_check == values[i][1]){//計算是否有正確的密碼
                                 document.location.href="../submit/index.html";
-                                alert('登入成功!');
-
                             }
                             else{
                                 alert('密碼錯誤!');
