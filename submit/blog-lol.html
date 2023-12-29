@@ -83,6 +83,8 @@
                                 <figure class="mb-4"><img class="img-fluid rounded" src="../assets/img/222.jpg" alt="..." /></figure>
                                 <!-- Post content-->
                                 <section class="mb-5">
+                                    <button id="show">顯示</button>
+                                    <button id="hide">隱藏</button>
                                     <p class="fs-5 mb-4">英雄聯盟（League of Legends，簡稱LoL）是一款由美國遊戲開發公司Riot Games開發並發行的多人線上戰術競技遊戲。該遊戲於2009年首次推出，迅速成為全球最受歡迎的電子競技遊戲之一。</p>
                                     <p class="fs-5 mb-4">在英雄聯盟中，玩家被放置於一個稱為「召喚師峽谷」的地圖上，兩支由不同英雄組成的隊伍對抗。每位玩家控制一名「英雄」，擁有獨特的技能和能力。遊戲的目標是摧毀對方隊伍的基地，稱為「水晶」，同時保護自己的水晶不被摧毀。</p>
                                     <p class="fs-5 mb-4">英雄聯盟以其豐富的遊戲內容和戰略性而聞名。遊戲擁有超過百位不同風格和技能的英雄可供玩家選擇，玩家需根據團隊需要和對手陣容進行策略性的英雄選擇。此外，遊戲中有多種地圖模式和遊戲模式可供玩家體驗，包括傳統的5對5對戰模式、快節奏的ARAM模式以及夜曲等特殊模式。</p>
@@ -121,6 +123,16 @@
         <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
         <script src="../js/scripts.js"></script>
         <script src="../js/blog-lol.js"></script>
+        <script>
+            $(document).ready(function(){
+               $("#show").click(function(){
+                  $("p").show();
+               });
+               $("#hide").click(function(){
+                  $("p").hide();
+               });
+            });
+         </script>　
         <script type="text/javascript">
             const scriptURL='https://script.google.com/macros/s/AKfycbxO1giJSff7nAON3t1lmJB8uJ9MO2Dz8Mv4aWAoImCjKxvVxMIH4PqmbOAsbgXXdanzng/exec';
             const form = document.forms['userForm'];
