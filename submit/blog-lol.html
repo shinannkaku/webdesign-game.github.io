@@ -20,9 +20,7 @@
         body {
             background-color:rgba(45, 64, 97, 0.265)
         }
-
-
-
+        
         .botton.link {
             display: inline-block;
             padding: 10px 20px;
@@ -32,6 +30,31 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+
+        .gallery {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        }
+        
+        .gallery-item {
+        width: 300px;
+        margin: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+        }
+        
+        .gallery-item img {
+        max-width: 100%;
+        height: auto;
+        }
+        
+        .gallery-item p {
+        margin-top: 10px;
+        }
+
     </style>
 
     <body class="d-flex flex-column h-100">
@@ -90,7 +113,41 @@
                                     <p class="fs-5 mb-4">英雄聯盟以其豐富的遊戲內容和戰略性而聞名。遊戲擁有超過百位不同風格和技能的英雄可供玩家選擇，玩家需根據團隊需要和對手陣容進行策略性的英雄選擇。此外，遊戲中有多種地圖模式和遊戲模式可供玩家體驗，包括傳統的5對5對戰模式、快節奏的ARAM模式以及夜曲等特殊模式。</p>
                                     <p class="fs-5 mb-4">英雄聯盟不僅僅是一款遊戲，它也是一個巨大的電子競技平台。全球各地有成千上萬的玩家參與各種規模的比賽，從家庭友誼賽到職業比賽，甚至是國際賽事，如全球錦標賽（Worlds）和季中冠軍賽（MSI）。這些比賽吸引了大量的觀眾和支持者，並產生了龐大的獎金和贊助商。</p>
                                     <p class="fs-5 mb-4">總的來說，英雄聯盟作為一款戰略性、多人在線競技遊戲，不僅擁有豐富多樣的遊戲內容和深度策略，也在電子競技和娛樂文化領域扮演著重要的角色，吸引了全球廣大玩家和支持者的熱愛與參與。</p>
-                                        <!-- 在這裡加入內容 -->                                        
+                                        <div class="gallery">
+                                            <div class="gallery-item">
+                                              <img src="../assets/img/hero1.jpg" alt="圖片1">
+                                              <p>刺客英雄</p>
+                                            </div>
+                                            
+                                            <div class="gallery-item">
+                                              <img src="../assets/img/hero2.jpg" alt="圖片2">
+                                              <p>鬥士英雄</p>
+                                            </div> 
+                                            
+                                            <div class="gallery-item">
+                                                <img src="../assets/img/hero3.jpg" alt="圖片3">
+                                                <p>法師英雄</p>
+                                              </div>   
+
+                                            <div class="gallery-item">
+                                                <img src="../assets/img/hero4.jpg" alt="圖片4">
+                                                <p>射手英雄</p>
+                                            </div>   
+
+                                            <div class="gallery-item">
+                                                <img src="../assets/img/hero5.jpg" alt="圖片5">
+                                                <p>輔助英雄</p>
+                                            </div>   
+
+                                            <div class="gallery-item">
+                                                <img src="../assets/img/hero6.jpg" alt="圖片6">
+                                                <p>坦克英雄</p>
+                                            </div>   
+                                            <div>
+                                                <p>我最喜歡玩的英雄是狗頭人</p>
+                                                <p>因為可以一直疊層，疊到中期就可以棒槌對面，前期隱忍後面爆發的時候很爽</p>
+                                                <img src="../assets/img/hero7.jpg" alt="圖片7">
+                                            </div>
                                 </section>
                             </article>
 
@@ -168,7 +225,14 @@
             <div class="container px-5">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
                     <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; 網頁程式設計 2023</div></div>
+                    <div class="col-auto"><div class="small m-0 text-white">想要看更多內容請點擊右上角官方網站</div></div>
                 </div>
+            </div>
+            <div class="container">
+                <p class="float-end mb-1">
+                    <a href="#">Back to top</a>
+                </p>
+                <p class="mb-0"><a href="../index.html">Visit the homepage</a> </p>
             </div>
         </footer>
     </body>
